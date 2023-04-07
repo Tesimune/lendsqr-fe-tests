@@ -65,7 +65,7 @@ const Users = () => {
 
     return (
 
-        <div className="mt-10 w-full overflow-x-auto">
+        <div className="py-10 w-full overflow-x-auto">
             <table className="w-full overflow-x-auto table-auto text-sm text-left text-gray-500">
                 <thead className="text-xs text-gray-700 uppercase bg-white">
                     <tr>
@@ -127,12 +127,7 @@ const Users = () => {
                 containerClassName="flex justify-center items-center mt-4"
                 pageClassName="mx-2 rounded-lg hover:bg-gray-200 transition-colors duration-300"
                 pageLinkClassName="py-2 px-4 block text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors duration-300"
-                previousClassName="pagination-btn"
-                nextClassName="pagination-btn"
-                previousLinkClassName="page-link"
-                nextLinkClassName="page-link"
                 activeClassName="bg-secondary text-white"
-                // linkClass="pagination-btn"
             />
 
         </div>

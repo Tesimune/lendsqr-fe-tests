@@ -1,0 +1,10 @@
+.layout{
+    @apply bg-gray-50 min-h-screen;
+        
+    .sidebar{
+        @apply lg:w-[10%];
+    }
+    .main{
+        @apply h-full w-full p-3 lg:pl-32;
+    }
+}

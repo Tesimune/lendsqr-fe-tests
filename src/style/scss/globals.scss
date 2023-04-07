@@ -16,6 +16,7 @@ input {
     @apply outline-none border-none;
 }
 
+@import "./layout";
 @import "./navbar";
 @import "./login";
 

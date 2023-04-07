@@ -3,7 +3,7 @@ import { Badge, Bank, BriefCase, ChartBar, Chevron, ClipBoard, Coins, Galaxy, Ha
 
 function DashboardSidebar() {
   return (
-    <aside className="bg-white shadow h-full fixed top-[80px]">
+    <aside className="bg-white shadow h-full fixed top-[80px] z-30 hidden lg:block">
         <ul className="sidebar py-5 h-full overflow-auto">
             <SidebarCollapse label="Switch Organization" icon={BriefCase} />
             <SidebarItem label="Dashboard" icon={Home} />

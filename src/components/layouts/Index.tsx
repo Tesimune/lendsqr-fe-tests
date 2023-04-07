@@ -13,10 +13,10 @@ const Dashboard = ({children}: any) => {
             <Navbar />
 
             <section className="flex">
-                <div className='w-[10%]'>
+                <div className='lg:w-[10%]'>
                     <DashboardSidebar />
                 </div>
-                <main className='h-full w-full p-3 pl-32'>
+                <main className='h-full w-full p-3 lg:pl-32'>
                     {children}
                 </main>
             </section>

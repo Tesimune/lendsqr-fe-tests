@@ -11,17 +11,3 @@ nav.navbar {
     }
 }
 
-@media screen and (min-width: 900px) {
-    nav.navbar {
-        
-        .navmenu {
-            @apply flex-grow flex items-center gap-10;
-
-            .link {
-                @apply flex items-center;
-            }
-
-            
-        }
-    }
-}

@@ -10,12 +10,12 @@ export default function Login() {
       <div className="login__page">
         <div className="wrapper">
             <div className="logo_container">
-            <AppLogo />
+                <AppLogo />
             </div>
 
             <div className="main">
                 
-                <div className="mockup_container relative w-12">
+                <div className="mockup_container relative w-12 hidden lg:block">
                     <img src='/images/mockup.svg' alt="MOCKUP" />
                 </div>
 

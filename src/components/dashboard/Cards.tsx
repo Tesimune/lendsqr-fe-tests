@@ -2,7 +2,7 @@ import React from 'react'
 
 function Cards() {
   return (
-    <div className="grid md:grid-cols-4 gap-3 md:gap-5 w-full">
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5 w-full">
             <div className="grid">
                 <a href="#/" className='bg-white shadow-md p-9'>
                     <div className="p-5 w-16 h-16 rounded-full bg-[#DF18FF]/20 flex items-center justify-center">

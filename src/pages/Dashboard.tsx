@@ -6,7 +6,7 @@ import Users from '../components/dashboard/Users';
 function Dashboard() {
   return (
     <div>
-        <Index>
+      <Index>
         <div className="dashboard">
           <h1 className="text-3xl pt-5 pb-10 font-medium">Users</h1>
           <Cards />
