@@ -28,7 +28,7 @@ export function useFetch(url: RequestInfo | URL) {
 }
 
 
-const User: React.FC = () => {
+const User = () => {
   
   const { loading, user } = useFetch("https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users/1");
   console.log(user)
