@@ -1,7 +1,7 @@
 import { Badge, Bank, BriefCase, ChartBar, Chevron, ClipBoard, Coins, Galaxy, HandShake, Home, Loan, NairaSack, PiggyBank, Receipt, Scroll, Slider, UserCheck, Users, UsersAlt, UserSettings, UserTimes } from "../Icons";
 
 
-function DashboardSidebar() {
+function DashboardSidebar({open}: any) {
   return (
     <aside className="bg-white shadow h-full fixed top-[80px] z-30 hidden lg:block">
         <ul className="sidebar py-5 h-full overflow-auto">

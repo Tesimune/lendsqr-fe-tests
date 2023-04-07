@@ -14,9 +14,9 @@ const Dashboard = ({children}: any) => {
 
             <section className="flex">
                 <div className='lg:w-[10%]'>
-                    <DashboardSidebar />
+                    <DashboardSidebar open={open}/>
                 </div>
-                <main className='h-full w-full p-3 lg:pl-32'>
+                <main className='h-full w-full p-3 lg:pl-[10%]'>
                     {children}
                 </main>
             </section>

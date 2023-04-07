@@ -1,16 +1,12 @@
 import React from 'react'
 import { AiOutlineUser } from 'react-icons/ai'
 
-interface Props {
-  user: string; // Define prop type for user
-}
 
-const Profile: React.FC<Props> = ({ user }) => {
+function Profile ({user}: any) {
+  console.log(user)
+  
   return (
     <div>
-      {typeof user === 'string' && (
-        <p>User: {user}</p>
-      )}
       <div className='grid items-center bg-white w-full'>
         <div className='flex flex-col lg:flex-row justify-center lg:justify-start items-center gap-5 p-5'>
           <div className='flex items-center bg-gray-300 p-7 rounded-full'>

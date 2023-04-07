@@ -31,7 +31,6 @@ export function useFetch(url: RequestInfo | URL) {
 const User = () => {
   
   const { loading, user } = useFetch("https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users/1");
-  console.log(user)
 
   if (loading) {
     return (
@@ -59,8 +58,8 @@ const User = () => {
             </div>
           </div>
           <section className='flex flex-col gap-5'>
-            <Profile user={'user'} />
-            <Details user={'user'} />
+            <Profile user={user} />
+            <Details user={user} />
           </section>
         </div>
       </Index>

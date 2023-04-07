@@ -1,10 +1,7 @@
 import React from 'react'
 
-interface Props {
-  user: string; // Define prop type for user
-}
 
-const Details: React.FC<Props> = ({ user }) => {
+function Details ({user}: any) {
   return (
     <div className='bg-white w-full'>
       <div className='flex flex-col gap-5 p-5'>
