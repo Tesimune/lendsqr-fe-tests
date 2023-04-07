@@ -5,7 +5,7 @@ import { IoIosMenu } from "react-icons/io"
 
 const Navbar = () => {
   return (
-    <nav className='navbar'>
+    <nav className='sticky top-0 h-[80px] w-full shadow flex items-center md:gap-24 justify-between px-5 md:px-10 bg-white z-50'>
 
             <div className="flex justify-center items-center gap-3">
                 <button className='text-2xl md:hidden' onClick={()=>{console.log('hello')}}>
