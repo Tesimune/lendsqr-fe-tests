@@ -1,9 +1,9 @@
 import { Badge, Bank, BriefCase, ChartBar, Chevron, ClipBoard, Coins, Galaxy, HandShake, Home, Loan, NairaSack, PiggyBank, Receipt, Scroll, Slider, UserCheck, Users, UsersAlt, UserSettings, UserTimes } from "../Icons";
 
 
-function DashboardSidebar({open}: any) {
+function DashboardSidebar() {
   return (
-    <aside className="bg-white shadow h-full fixed top-[80px] z-30 hidden lg:block">
+    <aside className="bg-white shadow h-full fixed top-[80px] z-30">
         <ul className="sidebar py-5 h-full overflow-auto">
             <SidebarCollapse label="Switch Organization" icon={BriefCase} />
             <SidebarItem label="Dashboard" icon={Home} />

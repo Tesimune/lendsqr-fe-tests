@@ -13,16 +13,18 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-          <Route index element={<App />} />
-          <Route path="login" element={<Login />} />
-          <Route path="dashboard" element={<Dashboard />} />
-          <Route path="user" element={<User />} />
-          <Route path="*" element={<NotFound />} />
-      </Routes>
-    </BrowserRouter>
-  </React.StrictMode>
+  <div className='font-primary text-dark'>
+    <React.StrictMode>
+      <BrowserRouter>
+        <Routes>
+            <Route index element={<App />} />
+            <Route path="login" element={<Login />} />
+            <Route path="dashboard" element={<Dashboard />} />
+            <Route path="user" element={<User />} />
+            <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </React.StrictMode>
+  </div>
 );
 

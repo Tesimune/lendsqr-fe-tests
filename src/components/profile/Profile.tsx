@@ -3,7 +3,7 @@ import { AiOutlineUser } from 'react-icons/ai'
 
 
 function Profile ({user}: any) {
-  console.log(user)
+  // console.log(user)
   
   return (
     <div>

@@ -24,9 +24,9 @@ export default function Login() {
                     <p className="mb-10">Enter Login Details</p>
 
                     <form className="flex flex-col gap-5 md:max-w-[400px]">
-                        <input type="text" placeholder="Email Address" className="p-3 rounded ring-1 ring-dark/50 outline-none" />
+                        <input type="text" placeholder="Email Address" className="p-3 rounded ring-1 ring-dark/50 outline-none border-none" />
                         <div className="rounded ring-1 ring-dark/40 text-sm flex items-center">
-                            <input type={show ? "text" : "password"} className='bg-transparent p-3 flex-grow outline-none' placeholder="Password" />
+                            <input type={show ? "text" : "password"} className='bg-transparent p-3 flex-grow outline-none border-none' placeholder="Password" />
                             <button type="button" onClick={() => setShow(!show)} className='uppercase font-semibold text-secondary px-5 tracking-wider'>
                                 {show ? "Hide" : "Show"}
                             </button>

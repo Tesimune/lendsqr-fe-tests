@@ -3,19 +3,31 @@ import Navbar from './Navbar';
 import DashboardSidebar from './Sidebar';
 
 const Dashboard = ({children}: any) => {
-
-    const [open, setOpen] = useState(true);
-    const [expand, setExpand] = useState(true);
+    const [open, setOpen] = useState(false);
+    
+    const bar = () => {
+        if (open === true){
+            setOpen(false)
+        }else{
+            setOpen(true)
+        }
+    }
 
     return (
         <div className="bg-gray-50 min-h-screen">
 
-            <Navbar />
+            <Navbar bar={bar} open={open}/>
 
             <section className="flex">
-                <div className='lg:w-[10%]'>
-                    <DashboardSidebar open={open}/>
-                </div>
+                {open === true ? (
+                    <div className='lg:hidden'>
+                        <DashboardSidebar />
+                    </div>
+                ):(
+                    <div className='lg:w-[10%] hidden lg:block'>
+                        <DashboardSidebar />
+                    </div>
+                )}
                 <main className='h-full w-full p-3 lg:pl-[10%]'>
                     {children}
                 </main>
