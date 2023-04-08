@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import ReactPaginate from 'react-paginate';
+import { Link } from 'react-router-dom';
 import formatDate from '../../utils/dateFormatter';
 import FilterForm from '../FilterForm';
-import { AiOutlineLoading3Quarters } from 'react-icons/ai';
+import { AiOutlineLoading3Quarters, AiOutlineEye } from 'react-icons/ai';
 import {MdMoreVert} from 'react-icons/md';
-import { Link } from 'react-router-dom';
+import { RiUserFollowLine, RiUserUnfollowLine } from 'react-icons/ri';
 
 export function useFetch(url: RequestInfo | URL) {
   const [users, setUsers] = useState<User[]>([]);
@@ -113,7 +114,7 @@ const Users = () => {
                                 <span className='px-3 py-2 text-xs rounded-full bg-warning/10 text-warning'>Pending</span>
                             </td>
                             <td className="py-4 px-3">
-                                <Menu userName={user.userName} />
+                                <Menu user={user} />
                             </td>
                         </tr>
                     ))}
@@ -134,7 +135,7 @@ const Users = () => {
     )
 }
 
-function Menu({userName}: any){
+function Menu({user}: any){
     const [more, setMore] = useState(false)
     const openMore = () => {
         if (more === false) {
@@ -153,13 +154,22 @@ function Menu({userName}: any){
                 <div className="absolute z-10 right-4 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
                     <ul className="py-2 text-sm text-gray-700 dark:text-gray-200">
                         <li>
-                            <Link to="/user" className="block px-4 py-2 hover:bg-gray-100">View Details</Link>
+                            <Link to={`/user/${user.id}`} className="flex items-center gap-3 px-4 py-2 hover:bg-gray-100">
+                                <AiOutlineEye className='h-5 w-5' />
+                                <span>View Details</span>
+                            </Link>
                         </li>
                         <li>
-                            <Link to="/" className="block px-4 py-2 hover:bg-gray-100">Blacklist User</Link>
+                            <Link to="/" className="flex items-center gap-3 px-4 py-2 hover:bg-gray-100">
+                                <RiUserUnfollowLine className='h-5 w-5' />
+                                <span>Blacklist User</span>
+                            </Link>
                         </li>
                         <li>
-                            <Link to="/" className="block px-4 py-2 hover:bg-gray-100">Activate User</Link>
+                            <Link to="/" className="flex items-center gap-3 px-4 py-2 hover:bg-gray-100">
+                                <RiUserFollowLine className='h-5 w-5' />
+                                <span>Activate User</span>
+                            </Link>
                         </li>
                     </ul>
                 </div>

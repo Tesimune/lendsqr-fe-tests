@@ -5,6 +5,7 @@ import { BsArrowLeft } from 'react-icons/bs'
 import Index from '../components/layouts/Index'
 import Profile from '../components/profile/Profile'
 import Details from '../components/profile/Details'
+import { useParams } from 'react-router-dom';
 
 export function useFetch(url: RequestInfo | URL) {
   const [user, setUser] = useState([]);
@@ -29,9 +30,9 @@ export function useFetch(url: RequestInfo | URL) {
 
 
 const User = () => {
+  const { id } = useParams(); // Get the id parameter from the URL
+  const { loading, user } = useFetch(`https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users/${id}`);
   
-  const { loading, user } = useFetch("https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users/1");
-
   if (loading) {
     return (
       <div className="flex items-center justify-center py-24">

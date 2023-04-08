@@ -20,7 +20,7 @@ root.render(
             <Route index element={<App />} />
             <Route path="login" element={<Login />} />
             <Route path="dashboard" element={<Dashboard />} />
-            <Route path="user" element={<User />} />
+            <Route path="user/:id" element={<User />} />
             <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
